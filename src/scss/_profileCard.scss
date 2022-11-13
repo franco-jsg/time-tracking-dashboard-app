@@ -1,0 +1,91 @@
+.profile-container{
+    width: 25%;
+    height: 100%;
+    background-color: $Dark-blue;
+
+    border-radius: $br-1;
+
+    @media(max-width: $mobile) {
+        width: 100%;
+        max-height: 25rem;
+
+    };
+
+}
+
+.profile-card {
+    height: 70%;
+    background-color: $Blue;
+    border-radius: $br-1;
+    padding: $p-y-container $p-x-container;
+
+    display: flex;
+    flex-direction: column;
+    gap: $gap-3;
+
+    img {
+        width: 7rem;
+        height: 7rem;
+        border: 0.2rem solid $White;
+        border-radius: $br-2;
+    }
+
+    @media(max-width: $mobile) {
+        flex-direction: row;
+        align-items: center;
+        padding: $p-y-mobile-container $p-x-mobile-container;
+        gap: $gap-mobile;
+
+    };
+}
+
+.profile-card-info {
+    display: flex;
+    flex-direction: column;
+    gap: $gap-1;
+
+    p {
+        color: $Pale-blue;
+    }
+
+    h2 {
+        font-size: $font-size-3;
+        font-weight: 300;
+        color: white;
+    }
+}
+
+.profile-calendar {
+    height: 30%;
+
+    padding: $p-y-container $p-x-container;
+
+    // display: inline-flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+
+    button {
+        background-color: transparent;
+        border: none;
+        text-align: left;
+        font-size: $font-size-2;
+        color: $Pale-blue;
+
+        &:hover {
+            color: $White;
+            cursor: pointer;
+        }
+    }
+
+    @media(max-width: $mobile) {
+        flex-direction: row;
+        align-items: center;
+        padding: $p-y-mobile-container $p-x-mobile-container;
+
+        button {
+            font-size: $font-size-mobile-2
+        }
+    };
+}
